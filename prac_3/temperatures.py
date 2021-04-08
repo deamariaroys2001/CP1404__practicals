@@ -5,6 +5,7 @@ Q - Quit"""
 
 
 def main():
+
     print(MENU)
     choice = input(">>> ").upper()
     while choice != "Q":
