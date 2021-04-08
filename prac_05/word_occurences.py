@@ -13,6 +13,6 @@ for word in words:
 
 words = list(words_list.keys())
 words.sort()
-longest_word = max(len(word) for word in words)
+length_longest_word = max(len(word) for word in words)
 for word in words :
- print("{:{}} : {}".format(word, longest_word,words_list[word]))
+ print("{:{}} : {}".format(word, length_longest_word,words_list[word]))
