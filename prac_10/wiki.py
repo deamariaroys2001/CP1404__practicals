@@ -1,10 +1,14 @@
 import wikipedia
 
-title = input("Search:")
-while title != "":
+user_input = 0
+while user_input != "":
     try:
-        title = input("Search:")
-        print(wikipedia.summary(title))
+        user_input = input("Search:")
+        page_details = wikipedia.page(user_input)
+        print(page_details.title)
+        print(page_details.summary)
+        print(page_details.url)
     except wikipedia.exceptions.DisambiguationError as e:
         print(e.options)
-    title = input("Search:")
+    user_input = input("Search:")
+
